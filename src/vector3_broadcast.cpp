@@ -38,12 +38,12 @@ pub_orientation.publish(orientation);
 }
 
 int main(int argc, char** argv) {
-  ros::init(argc, argv, "pixhawk_imu_to_eular");
+  ros::init(argc, argv, "pixhawk_imu_to_euler");
   ros::NodeHandle nh;
   ros::Subscriber imu_sub;
 
   imu_sub = nh.subscribe<sensor_msgs::Imu>( "/mavros/imu/data", 1,  pixhawkImuCallback);  
-  pub_orientation = nh.advertise<geometry_msgs::Vector3>("/mavros/imu/data/eular", 1);
+  pub_orientation = nh.advertise<geometry_msgs::Vector3>("/mavros/imu/data/euler", 1);
   ros::spin();
   return 0;
 }
