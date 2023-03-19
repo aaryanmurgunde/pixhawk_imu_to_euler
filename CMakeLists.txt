@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(pixhawk_imu_to_eular)
+project(pixhawk_imu_to_euler)
 
 find_package(catkin REQUIRED
 COMPONENTS
